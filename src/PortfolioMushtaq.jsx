@@ -116,7 +116,7 @@ export default function PortfolioMushtaq() {
         blurb: "IoT and camera integration for advanced mobile applications for construction site.",
         stack: ["React Native", "IoT", "BLE", "Wi-Fi", "Camera APIs", "Clean Architecture", "HTTP", "Media Management"],
         image: "https://plus.unsplash.com/premium_photo-1681691912442-68c4179c530c?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        link: "#",
+        link: "https://contineu.ai/",
       },
     {
       name: "VYBE",
