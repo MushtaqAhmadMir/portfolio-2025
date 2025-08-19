@@ -227,10 +227,9 @@ export default function PortfolioMushtaq() {
                 <button 
                   key={n.id} 
                   onClick={() => anchorClick(n.id)} 
-                  className="relative px-1 py-2 text-gray-600 hover:text-gray-900 transition-all duration-300 font-medium group"
+                  className="relative px-1 py-2 text-gray-600 hover:text-gray-900 transition-all duration-300 font-medium"
                 >
                   <span className="relative z-10">{n.label}</span>
-                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-purple-600 group-hover:w-full transition-all duration-300"></div>
                 </button>
               ))}
             </nav>
@@ -351,8 +350,8 @@ export default function PortfolioMushtaq() {
                 I build high‑performance mobile apps with clean architecture, robust state management, and delightful UX. 5+ years across banking, e‑commerce, healthcare, IoT, and more.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <a href="mailto:mushtaq11917632@gmail.com" className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-sky-500 to-emerald-500 hover:from-sky-400 hover:to-emerald-400 px-5 py-3 text-sm font-medium shadow-lg shadow-sky-500/20 transition-all duration-300">
-                  <Mail size={16} /> Let's Talk
+                <a href="mailto:mushtaq11917632@gmail.com"  className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-sky-500 to-emerald-500 hover:from-sky-400 hover:to-emerald-400 px-5 py-3 text-sm font-medium shadow-lg shadow-sky-500/20 transition-all duration-300">
+                  <Mail  size={16} /> Let's Talk
                 </a>
                 <a href="https://www.linkedin.com/in/mushtaqahmadmir/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-2xl border border-white/15 hover:bg-white/5 hover:border-sky-500/50 px-5 py-3 text-sm transition-all duration-300">
                   <Linkedin size={16} /> LinkedIn
