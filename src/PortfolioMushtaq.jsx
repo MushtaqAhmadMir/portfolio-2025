@@ -205,78 +205,76 @@ export default function PortfolioMushtaq() {
   return (
     <div className={`min-h-screen w-full text-slate-100 ${gradient} bg-slate-950/95`}>      
       {/* NAVBAR */}
-      <header className="sticky top-0 z-50 backdrop-blur-xl bg-slate-900/95 border-b border-slate-700/50 shadow-xl">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200/50">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="flex h-20 items-center justify-between">
             {/* Logo & Name */}
             <button onClick={() => anchorClick("home")} className="group relative flex items-center gap-3">
               <div className="relative">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-500 to-emerald-500 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
-                  <span className="text-slate-900 font-bold text-lg">M</span>
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300">
+                  <span className="text-white font-bold text-lg">M</span>
                 </div>
-                <div className="absolute -inset-1 rounded-xl bg-gradient-to-br from-sky-500 to-emerald-500 opacity-20 blur-sm group-hover:opacity-30 transition-opacity duration-300"></div>
               </div>
               <div className="flex flex-col">
-                <span className="text-sky-400 font-bold text-xl leading-none tracking-tight">Mushtaq Ahmad Mir</span>
-                <span className="text-slate-400 text-sm leading-none font-medium">Mobile App Developer</span>
+                <span className="text-gray-900 font-bold text-xl leading-none tracking-tight">Mushtaq Ahmad Mir</span>
+                <span className="text-gray-500 text-sm leading-none font-medium">Mobile App Developer</span>
               </div>
             </button>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-1">
+            <nav className="hidden lg:flex items-center gap-8">
               {nav.map((n) => (
                 <button 
                   key={n.id} 
                   onClick={() => anchorClick(n.id)} 
-                  className="relative px-5 py-2.5 rounded-xl text-slate-300 hover:text-sky-400 transition-all duration-300 font-medium group"
+                  className="relative px-1 py-2 text-gray-600 hover:text-gray-900 transition-all duration-300 font-medium group"
                 >
                   <span className="relative z-10">{n.label}</span>
-                  <div className="absolute inset-0 bg-sky-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
-                  <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-sky-500 to-emerald-500 group-hover:w-3/4 group-hover:left-1/4 transition-all duration-300"></div>
+                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-purple-600 group-hover:w-full transition-all duration-300"></div>
                 </button>
               ))}
             </nav>
 
             {/* Desktop Actions */}
-            <div className="hidden lg:flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-4">
               <a
                 href="mailto:mushtaq11917632@gmail.com"
-                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-sky-500 to-emerald-500 hover:from-sky-400 hover:to-emerald-400 px-5 py-2.5 text-sm font-semibold shadow-lg transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:shadow-md"
               >
-                <Mail size={16} /> Hire Me
+                <Mail size={16} /> Contact Me
               </a>
               <div className="flex items-center gap-2">
                 <a
                   href="https://www.linkedin.com/in/mushtaqahmadmir/"
                   target="_blank"
                   rel="noreferrer"
-                  className="p-2.5 rounded-xl border border-slate-600 hover:border-sky-500 hover:bg-sky-500/10 transition-all duration-300 hover:scale-110"
+                  className="p-2.5 rounded-lg bg-gray-100 hover:bg-gray-200 transition-all duration-300"
                   aria-label="LinkedIn"
                 >
-                  <Linkedin size={18} className="text-slate-300 hover:text-sky-400 transition-colors duration-300" />
+                  <Linkedin size={18} className="text-gray-600 hover:text-indigo-600 transition-colors duration-300" />
                 </a>
                 <a
                   href="https://github.com/mushtaqahmadmir"
                   target="_blank"
                   rel="noreferrer"
-                  className="p-2.5 rounded-xl border border-slate-600 hover:border-emerald-500 hover:bg-emerald-500/10 transition-all duration-300 hover:scale-110"
+                  className="p-2.5 rounded-lg bg-gray-100 hover:bg-gray-200 transition-all duration-300"
                   aria-label="GitHub"
                 >
-                  <Github size={18} className="text-slate-300 hover:text-emerald-400 transition-colors duration-300" />
+                  <Github size={18} className="text-gray-600 hover:text-purple-600 transition-colors duration-300" />
                 </a>
               </div>
             </div>
 
             {/* Mobile Menu Button */}
             <button 
-              className="lg:hidden p-2.5 rounded-xl border border-slate-600 hover:border-sky-500 hover:bg-sky-500/10 transition-all duration-300" 
+              className="lg:hidden p-2.5 rounded-lg bg-gray-100 hover:bg-gray-200 transition-all duration-300" 
               onClick={() => setOpen((v) => !v)} 
               aria-label="Toggle menu"
             >
               <div className="relative w-6 h-6">
-                <span className={`absolute inset-0 w-6 h-0.5 bg-slate-300 transition-all duration-300 ${open ? 'rotate-45 translate-y-0' : '-translate-y-2'}`}></span>
-                <span className={`absolute inset-0 w-6 h-0.5 bg-slate-300 transition-all duration-300 ${open ? 'opacity-0' : 'opacity-100'}`}></span>
-                <span className={`absolute inset-0 w-6 h-0.5 bg-slate-300 transition-all duration-300 ${open ? '-rotate-45 translate-y-0' : 'translate-y-2'}`}></span>
+                <span className={`absolute inset-0 w-6 h-0.5 bg-gray-600 transition-all duration-300 ${open ? 'rotate-45 translate-y-0' : '-translate-y-2'}`}></span>
+                <span className={`absolute inset-0 w-6 h-0.5 bg-gray-600 transition-all duration-300 ${open ? 'opacity-0' : 'opacity-100'}`}></span>
+                <span className={`absolute inset-0 w-6 h-0.5 bg-gray-600 transition-all duration-300 ${open ? '-rotate-45 translate-y-0' : 'translate-y-2'}`}></span>
               </div>
             </button>
           </div>
@@ -284,16 +282,16 @@ export default function PortfolioMushtaq() {
 
         {/* Mobile Menu */}
         {open && (
-          <div className="lg:hidden border-t border-slate-700/50 bg-slate-900/98">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
-              <nav className="grid gap-3 mb-6">
+          <div className="lg:hidden border-t border-gray-200 bg-white/98 backdrop-blur-md">
+            <div className="w-full px-4 sm:px-6 lg:px-8 py-6">
+              <nav className="grid gap-2 mb-6">
                 {nav.map((n) => (
                   <button 
                     key={n.id} 
                     onClick={() => anchorClick(n.id)} 
-                    className="flex items-center gap-4 px-5 py-3 rounded-xl bg-slate-800/50 hover:bg-slate-800 hover:text-sky-400 transition-all duration-300 font-medium text-left border border-slate-700/50 hover:border-sky-500/30"
+                    className="flex items-center gap-3 px-4 py-3 rounded-lg bg-gray-50 hover:bg-gray-100 hover:text-gray-900 transition-all duration-300 font-medium text-left text-gray-600"
                   >
-                    <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-sky-500 to-emerald-500"></div>
+                    <div className="w-2 h-2 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600"></div>
                     {n.label}
                   </button>
                 ))}
@@ -301,26 +299,26 @@ export default function PortfolioMushtaq() {
               <div className="flex flex-col gap-4">
                 <a 
                   href="mailto:mushtaq11917632@gmail.com" 
-                  className="flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-sky-500 to-emerald-500 hover:from-sky-400 hover:to-emerald-400 px-5 py-3 text-sm font-semibold shadow-lg transition-all duration-300"
+                  className="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300"
                 >
-                  <Mail size={16} /> Hire Me
+                  <Mail size={16} /> Contact Me
                 </a>
                 <div className="flex justify-center gap-3">
                   <a 
                     href="https://www.linkedin.com/in/mushtaqahmadmir/" 
                     target="_blank" 
                     rel="noreferrer" 
-                    className="p-3 rounded-xl border border-slate-600 hover:border-sky-500 hover:bg-sky-500/10 transition-all duration-300"
+                    className="p-3 rounded-lg bg-gray-100 hover:bg-gray-200 transition-all duration-300"
                   >
-                    <Linkedin size={20} className="text-slate-300" />
+                    <Linkedin size={20} className="text-gray-600" />
                   </a>
                   <a 
                     href="https://github.com/mushtaqahmadmir" 
                     target="_blank" 
                     rel="noreferrer" 
-                    className="p-3 rounded-xl border border-slate-600 hover:border-emerald-500 hover:bg-emerald-500/10 transition-all duration-300"
+                    className="p-3 rounded-lg bg-gray-100 hover:bg-gray-200 transition-all duration-300"
                   >
-                    <Github size={20} className="text-slate-300" />
+                    <Github size={20} className="text-gray-600" />
                   </a>
                 </div>
               </div>
@@ -339,7 +337,7 @@ export default function PortfolioMushtaq() {
           
         </div>
         
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+        <div className="w-full px-4 sm:px-6 lg:px-8 py-24">
           <motion.div {...sectionFade} className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
             
@@ -387,7 +385,7 @@ export default function PortfolioMushtaq() {
 
       {/* ABOUT */}
       <section id="about" className="py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <motion.div {...sectionFade}>
             <h2 className="text-2xl sm:text-3xl font-bold">About Me</h2>
             <p className="mt-4 max-w-3xl text-slate-300">
@@ -399,7 +397,7 @@ export default function PortfolioMushtaq() {
 
       {/* SKILLS */}
       <section id="skills" className="py-20 border-y border-white/10 bg-gradient-to-br from-white/5 to-white/2">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <motion.div {...sectionFade}>
             <h2 className="text-2xl sm:text-3xl font-bold">Skills</h2>
             <ul className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -416,7 +414,7 @@ export default function PortfolioMushtaq() {
 
       {/* EXPERIENCE */}
       <section id="experience" className="py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <motion.div {...sectionFade}>
             <h2 className="text-2xl sm:text-3xl font-bold">Experience</h2>
             <div className="mt-8 space-y-6">
@@ -450,7 +448,7 @@ export default function PortfolioMushtaq() {
 
       {/* PROJECTS */}
       <section id="projects" className="py-20 border-y border-white/10 bg-gradient-to-br from-white/5 to-white/2">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <motion.div {...sectionFade}>
             <div className="flex items-end justify-between gap-4">
               <h2 className="text-2xl sm:text-3xl font-bold">Projects</h2>
@@ -485,7 +483,7 @@ export default function PortfolioMushtaq() {
 
       {/* EDUCATION */}
       <section id="education" className="py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <motion.div {...sectionFade}>
             <h2 className="text-2xl sm:text-3xl font-bold">Education</h2>
             <div className="mt-6 grid gap-4 md:grid-cols-2">
@@ -504,7 +502,7 @@ export default function PortfolioMushtaq() {
 
       {/* CALL TO ACTION */}
       <section className="py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <motion.div {...sectionFade} className="rounded-3xl border border-white/10 bg-gradient-to-br from-sky-500/10 to-emerald-500/10 p-8 text-center">
             <h3 className="text-2xl font-bold">Let's build something exceptional</h3>
             <p className="mt-2 text-slate-300">I can join your team or ship features end‑to‑end as a contractor.</p>
@@ -522,7 +520,7 @@ export default function PortfolioMushtaq() {
 
       {/* CONTACT */}
       <section id="contact" className="py-20 border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <motion.div {...sectionFade} className="grid lg:grid-cols-2 gap-8">
             <div>
               <h2 className="text-2xl sm:text-3xl font-bold">Contact</h2>
