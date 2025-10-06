@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { motion } from "framer-motion";
+import logo from './assets/mushtaq.jpg';
 import { Mail, Phone, Github, Linkedin, ExternalLink, Download, MapPin, ChevronRight, CircleCheck, Menu, X } from "lucide-react";
 
 /**
@@ -367,8 +368,10 @@ export default function PortfolioMushtaq() {
             <div className="relative flex justify-center lg:justify-end">
               <div className="relative">
                 <div className="w-92 h-[34rem] rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-2 shadow-2xl overflow-hidden">
+                 
+             
                   <img
-                    src="https://scontent.fsxr1-2.fna.fbcdn.net/v/t1.6435-9/85073276_1530627057102181_4349946802988908544_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=123t-QuYX1cQ7kNvwGARfTj&_nc_oc=AdkzQ9WFD8UhrNMFr4AMihSYOqydmBBhkWf3Xr2feUlv7TAJfcIl73oAbDSEOgu8M2yEBL_BgTqh_uhM2BZ9I8WZ&_nc_zt=23&_nc_ht=scontent.fsxr1-2.fna&_nc_gid=1fqj8X5A-LYPLG0_JChLlA&oh=00_AfUHYGvIQ6Fr-nlINcah9nnCrx3Jo-rGHLJ7A6CUGb-8uw&oe=68CB92F3"
+                    src={logo}
                     alt="Mushtaq Ahmad Mir"
                         className="h-full w-full object-cover rounded-3xl"
                   />
