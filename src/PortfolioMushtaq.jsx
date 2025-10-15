@@ -120,7 +120,7 @@ export default function PortfolioMushtaq() {
         link: "https://contineu.ai/",
       },
     {
-      name: "VYBE",
+      name: "VYBE (Kotak Bank)",
       blurb: "Finance app for banking and financial management with secure transactions and real-time updates.",
       stack: ["React Native", "Firebase", "REST APIs", "Secure Auth"],
       image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1600&auto=format&fit=crop",
@@ -559,7 +559,7 @@ export default function PortfolioMushtaq() {
       </section>
 
       <footer className="py-10 text-center text-sm text-slate-400">
-        © {new Date().getFullYear()} Mushtaq Ahmad Mir — Built with React, Tailwind & Framer Motion
+        © {new Date().getFullYear()} Mushtaq Ahmad Mir — Built with ❤️ 
       </footer>
     </div>
   );
